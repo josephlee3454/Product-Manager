@@ -10,5 +10,9 @@ const ProductSchema = new mongoose.Schema({
     description: { 
         type: String
     },
+    completed:{
+        type:Boolean,
+        default: false,
+    }
 }, { timestamps: true });
 module.exports.Product = mongoose.model('Product', ProductSchema);

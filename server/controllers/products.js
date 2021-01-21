@@ -29,7 +29,7 @@ module.exports.allProducts = (req,res)=>{
 
 
 module.exports.updateProducts = (req,res)=>{
-    Product.findOneAndUpdate({_id: req.params.id}, req.body)
+    Product.findOneAndUpdate({_id: req.params.id}, req.body, {new: true})
         .then(products => res.json(products))
         .catch(err => res.status(400).json(err));
 
