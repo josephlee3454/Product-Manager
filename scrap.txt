@@ -1,0 +1,9 @@
+     {
+       products.map((products, idx)=>
+       <div key={idx}>
+         <p>*******************{products.name}</p>
+         <p>******************{products.price}</p>
+         <p>*****************{products.description}</p>
+       </div>
+       )
+     }
